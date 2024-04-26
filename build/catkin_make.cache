@@ -1,0 +1,2 @@
+planner
+-DCATKIN_DEVEL_PREFIX=/home/lattinone/Desktop/ROSProjectGermanSanchez/devel -DCMAKE_INSTALL_PREFIX=/home/lattinone/Desktop/ROSProjectGermanSanchez/install -G Unix Makefiles
