@@ -7,6 +7,7 @@ project(planner)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  tf
 )
 
 ## Find Eigen3 library
