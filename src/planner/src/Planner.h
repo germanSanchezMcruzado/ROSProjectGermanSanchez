@@ -6,6 +6,13 @@
 
 #include "Node.h"
 
+
+struct CompareNode {
+    bool operator()(Node* const& a, Node* const& b) {
+        return a->getFCost() > b->getFCost();
+    }
+};
+
 class Planner
 {
 private:
@@ -23,7 +30,7 @@ public:
     void AddStart(const Eigen::Vector2i& start);
     void AddEnd(const Eigen::Vector2i& end);
     std::vector<Eigen::Vector2f> PlanPath();
-    std::vector<Eigen::Vector2i> DownsamplePath(const std::vector<Eigen::Vector2i>& path);
+    std::vector<Eigen::Vector2f> SmoothPath(const std::vector<Eigen::Vector2f>& path);
 };
 
 #endif // PLANNER_H

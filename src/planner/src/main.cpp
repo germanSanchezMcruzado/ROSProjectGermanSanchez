@@ -18,7 +18,7 @@ bool goal_provided = false;
 
 void MapCallback(const nav_msgs::OccupancyGrid::ConstPtr &msg)
 {
-    planner->Set(msg->data, msg->info.width, msg->info.height, 100, msg->info.resolution);
+    planner->Set(msg->data, msg->info.width, msg->info.height, 75, msg->info.resolution);
     ROS_INFO("Received map message:");
     ROS_INFO("Map metadata:");
     ROS_INFO("Resolution: %.3f", msg->info.resolution);
